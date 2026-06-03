@@ -61,6 +61,7 @@ const App = (() => {
       case 'h3': return `<h3>${b.html}</h3>`;
       case 'h4': return `<h4>${b.html}</h4>`;
       case 'html': return b.html;
+      case 'fig': return b.svg || '';
       case 'box': {
         const cls = { def: 'box-def', form: 'box-form', peras: 'box-peras', warn: 'box-warn', exam: 'box-exam' }[b.kind] || 'box-def';
         const ico = { def: '📐', form: '🧮', peras: '🍐', warn: '⚠️', exam: '🎯' }[b.kind] || '';
