@@ -329,3 +329,5 @@ body {
 .fig svg{max-width:100%;height:auto;color:var(--text);display:inline-block;}
 .fig figcaption{margin-top:8px;font-size:.82rem;color:var(--text-soft);line-height:1.35;padding:0 6px;}
 .example .fig{background:var(--bg-card);}
+.fig-img img{max-width:100%;height:auto;background:#fff;padding:8px;border-radius:6px;border:1px solid var(--border);}
+.fig-img figcaption{color:var(--text-soft);}
