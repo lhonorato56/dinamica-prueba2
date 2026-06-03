@@ -1,6 +1,6 @@
-# DinamiAcademy · Control 2 de Dinámica (FIS1514)
+# DinamiAcademy · Prueba 2 de Dinámica (FIS1514)
 
-Sitio web de estudio para el **Control 2 / Interrogación 2** de Dinámica. Mismo
+Sitio web de estudio para la **Prueba 2 (Interrogación 2)** de Dinámica. Mismo
 estilo que CalcAcademy: por temas, con resumen, fórmulas explicadas variable por
 variable, qué memorizar vs entender, y MUCHOS ejercicios con el **enunciado real de
 pruebas y ayudantías** (tal cual aparece) y la solución explicada paso a paso.
@@ -11,12 +11,12 @@ pruebas y ayudantías** (tal cual aparece) y la solución explicada paso a paso.
 - **Local:** doble clic en `index.html`. Necesita internet la primera vez para
   cargar las fórmulas (MathJax) y la tipografía.
 
-## Temario del Control 2 (lo que mandó la U)
+## Temario de la Prueba 2 (lo que mandó la U)
 Entra todo, con énfasis en **Newton**, **Energía y trabajo (incluye MAS)** e
 **Impulso y momentum**. NO incluye sistemas de masa variable.
 
 ## Qué tiene
-- **9 unidades** ordenadas por lo que más cae (análisis de Controles 2 / I2 reales
+- **9 unidades** ordenadas por lo que más cae (análisis de Interrogaciones 2 (I2) reales
   2021–2024, ayudantías 6–12, talleres 4–6 y el Compilado de S. Urrutia).
 - **30 lecciones** con teoría, fórmulas con cada variable explicada, y **~48
   ejercicios resueltos** paso a paso + **26 enunciados reales** transcritos tal cual
@@ -24,7 +24,7 @@ Entra todo, con énfasis en **Newton**, **Energía y trabajo (incluye MAS)** e
 - Lección de **"qué memorizar, qué entender y qué NO memorizar"** y los **"gatillos"**
   para saber qué método usar (energía / Newton / momentum).
 - **60 tarjetas** (flashcards) y **35 preguntas** de quiz.
-- **Formulario completo** para memorizar, **simulacro** tipo Control 2 y **plan de
+- **Formulario completo** para memorizar, **simulacro** tipo Prueba 2 y **plan de
   estudio día a día** hasta el viernes.
 - Modo claro/oscuro (◐), racha 🔥, nota promedio y progreso guardado en el navegador.
 

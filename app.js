@@ -105,12 +105,12 @@ const App = (() => {
 
     let html = `
       <div class="welcome-card">
-        <div><div class="u">Control 2 · Dinámica FIS1514 · <em>acceso completo</em></div>
-        <div class="sub">Tu camino al 5+ en el Control 2 · este viernes</div></div>
+        <div><div class="u">Prueba 2 · Dinámica FIS1514 · <em>acceso completo</em></div>
+        <div class="sub">Tu camino al 5+ en el Prueba 2 · este viernes</div></div>
         <div class="acc">A tu medida</div>
       </div>
       <div class="hero">
-        <h1>domina el <span class="grad">Control 2</span></h1>
+        <h1>domina el <span class="grad">Prueba 2</span></h1>
         <p class="lead">Newton, energía y trabajo (con MAS), e impulso y momentum. Nueve unidades ordenadas por lo que más cae, con enunciados reales de pruebas y solución paso a paso. Una a la vez.</p>
       </div>
       <div class="progress-box">

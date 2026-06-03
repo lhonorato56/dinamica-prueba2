@@ -1,6 +1,6 @@
 /* ============================================================
-   DinamiAcademy · content.js — TODO el contenido del Control 2 de Dinámica
-   FIS1514 (UC). Basado en el análisis de Controles 2 / Interrogaciones 2 reales
+   DinamiAcademy · content.js — TODO el contenido del Prueba 2 de Dinámica
+   FIS1514 (UC). Basado en el análisis de Interrogaciones 2 (I2) reales
    (2021–2024), ayudantías 6–12, talleres 4–6, el Compilado de S. Urrutia y las
    clases 11–15. Enunciados de pruebas/ayudantías transcritos TAL CUAL.
    Temario: Newton (énfasis), Trabajo y Energía (incl. MAS), Impulso y Momentum.
@@ -13,9 +13,9 @@ const CONTENT = {
   blocks: {
     repaso:   { label: '🔧 Antes de empezar', sub: 'Cómo usar esta página, cómo estudiar física, qué memorizar, y el repaso mínimo. Léelo primero.' },
     newton:   { label: '🟦 Newton · la base de todo', sub: 'DCL, fuerzas, roce, planos, poleas y movimiento circular. El temario dice "énfasis en Newton": aquí está.' },
-    energia:  { label: '⚡ Trabajo, energía y MAS · el corazón del C2', sub: 'El tema que MÁS cae. Trabajo-energía, conservación con roce, y movimiento armónico simple.' },
+    energia:  { label: '⚡ Trabajo, energía y MAS · el corazón de la Prueba 2', sub: 'El tema que MÁS cae. Trabajo-energía, conservación con roce, y movimiento armónico simple.' },
     momentum: { label: '💥 Impulso y momentum', sub: 'Impulso, conservación del momentum y choques (elásticos e inelásticos).' },
-    extra:    { label: '🏁 Para llegar listo', sub: 'Simulacro tipo Control 2 real, formulario para memorizar y el plan de estudio día a día.' }
+    extra:    { label: '🏁 Para llegar listo', sub: 'Simulacro tipo Prueba 2 real, formulario para memorizar y el plan de estudio día a día.' }
   },
   units: []
 };
@@ -34,7 +34,7 @@ U({
     {
       id: 'u0l1', title: 'Cómo usar esta página y cómo estudiar para el viernes',
       blocks: [
-        { t: 'p', html: 'Hola 👋 Vas a estudiar SOLO de aquí, así que está armado para llevarte de la mano hasta el Control 2. Lee esto corto y arrancamos.' },
+        { t: 'p', html: 'Hola 👋 Vas a estudiar SOLO de aquí, así que está armado para llevarte de la mano hasta el Prueba 2. Lee esto corto y arrancamos.' },
         { t: 'box', kind: 'peras', title: 'Cómo funciona', html: '<b>Unidades:</b> en el inicio están ordenadas por lo que MÁS cae. Entra a una y verás sus lecciones.<br><b>Tres pestañas por unidad:</b> 📖 <b>Lecciones</b> (teoría + ejercicios resueltos), 🎴 <b>Tarjetas</b> (memorizar fórmulas, tócalas para girarlas) y ✅ <b>Quiz</b> (chequear que entendiste).<br><b>Ejercicios con enunciado REAL:</b> cada ejercicio trae el enunciado <b>tal cual sale en pruebas/ayudantías</b> (para que te acostumbres al lenguaje), y la solución está escondida en "▸ Ver solución". <b>Intenta tú primero en papel</b>, después la abres.<br><b>Tu progreso se guarda solo</b> en el navegador (racha 🔥, nota, lecciones hechas).' },
         { t: 'box', kind: 'def', title: 'Cómo estudiar física (la única forma que funciona)', html: '<b>1. Física NO se memoriza leyendo: se aprende resolviendo.</b> Por cada tema, haz los ejercicios TÚ en papel antes de ver la solución.<br><b>2. Siempre parte por el DIBUJO y el DCL</b> (diagrama de cuerpo libre): dibuja el cuerpo, todas las fuerzas, y los ejes. El 80% de los errores se evitan con un buen DCL.<br><b>3. Identifica el método por las palabras clave</b> (los "gatillos", ver lección siguiente): ¿piden velocidad/altura sin tiempo? → energía. ¿piden fuerza/aceleración instantánea? → Newton. ¿hay choque? → momentum.<br><b>4. Cierra con el formulario</b> (Unidad 8) y el simulacro cronometrado.' },
         { t: 'box', kind: 'exam', title: 'Plan corto (tienes hasta el viernes)', html: '<b>Hoy/mañana:</b> U0 + U1 (Newton/DCL) + U4 y U5 (energía, lo que MÁS cae). Haz los quizzes.<br><b>Día siguiente:</b> U2 (planos/poleas) + U3 (circular) + U6 (MAS).<br><b>Penúltimo día:</b> U7 (impulso/momentum) + repasar ejercicios difíciles.<br><b>Víspera:</b> formulario (U8) + simulacro completo cronometrado.<br>Meta: necesitas sobre 5. Si dominas energía, Newton con poleas y MAS, ya estás sobre la línea. 💪' }
@@ -137,7 +137,7 @@ U({
         { t: 'box', kind: 'form', title: 'Roce estático y cinético', html: '<b>Estático</b> (cuerpo quieto): $f_s\\le\\mu_s N$. Es una fuerza que se "acomoda" para impedir el movimiento, hasta un máximo $\\mu_s N$.<br><b>Cinético</b> (cuerpo deslizando): $f_k=\\mu_k N$, valor FIJO, opuesto a la velocidad.' },
         { t: 'box', kind: 'warn', title: 'La trampa del roce estático', html: 'El roce estático NO siempre vale $\\mu_s N$: vale lo justo para mantener el equilibrio, y solo llega a $\\mu_s N$ <b>justo cuando el cuerpo está a punto de deslizar</b>. Por eso, para "¿se mueve?" comparas la fuerza que empuja contra el máximo $\\mu_s N$: si la supera, se mueve (y ahí usas $\\mu_k$).' },
         { t: 'box', kind: 'def', title: 'Receta "¿se mueve o no?"', html: '1) Supón que está quieto. 2) Calcula la fuerza neta que TIENDE a moverlo (ej. $m g\\sin\\theta$, o una fuerza aplicada). 3) Calcula el roce estático máximo $\\mu_s N$. 4) Si fuerza que empuja $>\\mu_s N$ ⇒ <b>se mueve</b> (recalcula con $a$ y $\\mu_k$). Si $\\le$ ⇒ <b>no se mueve</b> ($a=0$, y el roce vale lo que empuja).' },
-        { t: 'box', kind: 'exam', title: 'Enunciado real (C2 2022) — tal cual la prueba', html: '"Un bloque de aluminio de $m_1=20$ kg y un bloque de cobre con $m_2=60$ kg están conectados mediante una cuerda ideal sin masa que pasa por una polea ideal sin masa y sin fricción. Ambos bloques se colocan sobre una superficie de acero tal como se muestra en la figura, donde el ángulo $\\theta=30°$. Una vez colocados se liberan desde el reposo. (b) Cuando se liberan, ¿comenzarán a moverse? Fundamente. (c) Si comienzan a moverse, calcule la aceleración y la tensión; si no, determine la suma de las magnitudes de las fuerzas de fricción. Use $g=10$, $\\sin30=0{,}5$, $\\cos30\\approx0{,}87$." (Datos de tabla: aluminio-acero $\\mu_s=0{,}61$; acero-acero $\\mu_s=0{,}74$.)' },
+        { t: 'box', kind: 'exam', title: 'Enunciado real (I2 2022) — tal cual la prueba', html: '"Un bloque de aluminio de $m_1=20$ kg y un bloque de cobre con $m_2=60$ kg están conectados mediante una cuerda ideal sin masa que pasa por una polea ideal sin masa y sin fricción. Ambos bloques se colocan sobre una superficie de acero tal como se muestra en la figura, donde el ángulo $\\theta=30°$. Una vez colocados se liberan desde el reposo. (b) Cuando se liberan, ¿comenzarán a moverse? Fundamente. (c) Si comienzan a moverse, calcule la aceleración y la tensión; si no, determine la suma de las magnitudes de las fuerzas de fricción. Use $g=10$, $\\sin30=0{,}5$, $\\cos30\\approx0{,}87$." (Datos de tabla: aluminio-acero $\\mu_s=0{,}61$; acero-acero $\\mu_s=0{,}74$.)' },
         { t: 'example', title: 'Resolución del bloque aluminio/cobre', level: 'medio',
           body: '<p>$m_1=20$ kg (horizontal), $m_2=60$ kg (plano $30°$), conectados por polea. ¿Se mueven?</p>',
           solution: '<div class="steps"><div class="step"><b>DCL.</b> $m_1$ (horizontal): $N_1=m_1g=200$ N; lo que jala es la tensión. $m_2$ (plano): $N_2=m_2g\\cos30=60\\cdot10\\cdot0{,}87\\approx522$ N; lo que tiende a bajar es $m_2g\\sin30=60\\cdot10\\cdot0{,}5=300$ N.</div><div class="step"><b>Fuerza motriz</b> del sistema = $m_2g\\sin30=300$ N (tira de todo hacia abajo del plano).</div><div class="step"><b>Roce estático máximo</b> de ambos: $f_{1max}=\\mu_{s1}N_1=0{,}61\\cdot200=122$ N; $f_{2max}=\\mu_{s2}N_2=0{,}74\\cdot522\\approx386$ N. Pero ojo: el problema pide la suma de roces; el máximo combinado que se opone es $122+386\\approx508$ N (en la pauta usan $\\approx398{,}66$ N con otros coeficientes de la tabla).</div><div class="step"><b>Comparo:</b> fuerza motriz $300$ N $<$ roce estático máximo disponible. Por lo tanto <b>NO se mueve</b>.</div><div class="step"><b>(c)</b> Como $a=0$, la suma de las fuerzas de roce iguala a la fuerza motriz: $\\boxed{f_1+f_2=m_2g\\sin30=300\\text{ N}}$. (El roce estático solo aporta lo necesario, no su máximo.)</div></div>' },
@@ -156,11 +156,11 @@ U({
       id: 'u1l3', title: 'Sistemas acelerados y fuerzas de contacto',
       blocks: [
         { t: 'p', html: 'Cuando todo un montaje acelera (un carrito, una cuña, un camión), el truco es aplicar $\\sum\\vec F=m\\vec a$ con la aceleración del sistema. A veces conviene mirar el sistema completo y luego una parte.' },
-        { t: 'box', kind: 'exam', title: 'Enunciado real (C2 2023) — tal cual', html: '"Considere un bloque de masa $m_2$ que descansa sobre un bloque en forma de cuña, el cual tiene la posibilidad de moverse sobre una mesa sin roce. No existe roce entre el bloque $m_2$ y la cuña. Si a la cuña $m_1$ se le aplica una fuerza horizontal de magnitud $P$: (c) Encuentre la aceleración del sistema $m_1+m_2$ suponiendo que $m_2$ no resbala. (d) Encuentre $P$ en esa condición."' },
+        { t: 'box', kind: 'exam', title: 'Enunciado real (I2 2023) — tal cual', html: '"Considere un bloque de masa $m_2$ que descansa sobre un bloque en forma de cuña, el cual tiene la posibilidad de moverse sobre una mesa sin roce. No existe roce entre el bloque $m_2$ y la cuña. Si a la cuña $m_1$ se le aplica una fuerza horizontal de magnitud $P$: (c) Encuentre la aceleración del sistema $m_1+m_2$ suponiendo que $m_2$ no resbala. (d) Encuentre $P$ en esa condición."' },
         { t: 'example', title: 'Cuña con bloque que no resbala', level: 'dificil',
           body: '<p>Bloque $m_2$ sobre cuña $m_1$ (cara inclinada $\\theta$, sin roce en ningún lado), fuerza $P$ horizontal sobre la cuña. Halla $a$ y $P$ para que $m_2$ no resbale.</p>',
           solution: '<div class="steps"><div class="step"><b>Idea clave:</b> si $m_2$ no resbala, todo el sistema acelera junto con la misma $a$ horizontal. La única fuerza horizontal sobre $m_2$ es la componente horizontal de la normal $N_2$ que le hace la cuña.</div><div class="step"><b>DCL de $m_2$:</b> normal $N_2$ (perpendicular a la cara inclinada) y peso. Componentes: horizontal $N_2\\sin\\theta=m_2a$; vertical $N_2\\cos\\theta-m_2g=0$.</div><div class="step">De la vertical: $N_2=\\dfrac{m_2g}{\\cos\\theta}$. Sustituyo en la horizontal: $\\dfrac{m_2g}{\\cos\\theta}\\sin\\theta=m_2a\\Rightarrow \\boxed{a=g\\tan\\theta}$.</div><div class="step"><b>(d) Sistema completo</b> $m_1+m_2$ en x: $P=(m_1+m_2)a=\\boxed{(m_1+m_2)g\\tan\\theta}$.</div></div>' },
-        { t: 'box', kind: 'exam', title: 'Enunciado real (C2 2024) — tal cual', html: '"El cilindro liso de metal tiene masa $m$ y se apoya en un carrito al que se le comunica una aceleración de $2g$ en el sentido ascendente de un plano inclinado de ángulo $\\theta$ con la horizontal tal que $\\tan\\theta=3/4$. Calcule las fuerzas de contacto en los puntos $A$ y $B$." ($A$: pared vertical del carrito, normal horizontal; $B$: superficie del plano, normal perpendicular al plano.)' },
+        { t: 'box', kind: 'exam', title: 'Enunciado real (I2 2024) — tal cual', html: '"El cilindro liso de metal tiene masa $m$ y se apoya en un carrito al que se le comunica una aceleración de $2g$ en el sentido ascendente de un plano inclinado de ángulo $\\theta$ con la horizontal tal que $\\tan\\theta=3/4$. Calcule las fuerzas de contacto en los puntos $A$ y $B$." ($A$: pared vertical del carrito, normal horizontal; $B$: superficie del plano, normal perpendicular al plano.)' },
         { t: 'example', title: 'Cilindro en carrito que acelera 2g', level: 'dificil',
           body: '<p>$\\tan\\theta=3/4$ ⇒ $\\sin\\theta=3/5=0{,}6$, $\\cos\\theta=4/5=0{,}8$. Acelera $2g$ subiendo el plano. Halla $F_A$ y $F_B$.</p>',
           solution: '<div class="steps"><div class="step">Ejes a lo largo del plano (x, hacia arriba) y perpendicular (y). La aceleración es $\\vec a=2g\\,\\hat x$.</div><div class="step"><b>Fuerzas sobre el cilindro:</b> $F_A$ horizontal (de la pared del carrito); $F_B$ perpendicular al plano (en y); peso $mg$ vertical hacia abajo. Hay que proyectar $F_A$ y el peso a los ejes del plano.</div><div class="step">Peso en ejes del plano: $-mg\\sin\\theta\\,\\hat x-mg\\cos\\theta\\,\\hat y$. $F_A$ horizontal en ejes del plano: $F_A\\cos\\theta\\,\\hat x-F_A\\sin\\theta\\,\\hat y$.</div><div class="step"><b>Eje x:</b> $F_A\\cos\\theta-mg\\sin\\theta=m(2g)\\Rightarrow F_A(0{,}8)-mg(0{,}6)=2mg\\Rightarrow F_A=\\dfrac{2{,}6mg}{0{,}8}=\\boxed{\\tfrac{13}{4}mg}$.</div><div class="step"><b>Eje y</b> ($a_y=0$): $F_B-mg\\cos\\theta-F_A\\sin\\theta=0\\Rightarrow F_B=mg(0{,}8)+\\tfrac{13}{4}mg(0{,}6)=0{,}8mg+1{,}95mg=\\boxed{\\tfrac{11}{4}mg}$.</div></div>' }
@@ -219,11 +219,11 @@ U({
     {
       id: 'u2l2', title: 'La polea móvil y la relación 2:1 (la estrella)',
       blocks: [
-        { t: 'p', html: 'Este es el patrón que MÁS se repite en los Controles 2: una <b>polea móvil</b> que duplica (o reduce a la mitad) el movimiento. Si lo dominas, tienes medio control ganado.' },
+        { t: 'p', html: 'Este es el patrón que MÁS se repite en las I2 (pruebas pasadas): una <b>polea móvil</b> que duplica (o reduce a la mitad) el movimiento. Si lo dominas, tienes media prueba ganada.' },
         { t: 'box', kind: 'form', title: 'Polea móvil: relación 2:1', html: 'Cuando una cuerda rodea una polea móvil, el extremo libre se mueve el <b>doble</b> que la polea. Resultado típico:$$a_1=2a_2\\quad(\\text{o } x_1+2x_2=\\text{cte}\\Rightarrow \\ddot x_1+2\\ddot x_2=0)$$ El bloque atado al extremo libre acelera el doble que el atado a la polea móvil.' },
         { t: 'box', kind: 'peras', title: 'Por qué aparece el 2', html: 'Una polea móvil cuelga de DOS tramos de cuerda. Si la polea baja 1 cm, hay que "soltar" 1 cm de cuerda por cada tramo = 2 cm en total, que aparecen en el extremo libre. Por eso el extremo se mueve el doble. Y la fuerza es al revés: la polea móvil reparte la carga, $T_{soporte}=2T$.' },
-        { t: 'box', kind: 'exam', title: 'Enunciado real (C2 2024) — tal cual', html: '"Para el sistema de la figura encuentre las aceleraciones de los bloques $B$ (de masa $m$) y $A$ (de masa $M$) y las tensiones de las cuerdas." ($B$ sobre superficie horizontal unido a una cuerda que pasa por una polea fija a una polea móvil; de la polea móvil cuelga $A$.)' },
-        { t: 'example', title: 'Sistema con polea móvil (C2 2024)', level: 'dificil',
+        { t: 'box', kind: 'exam', title: 'Enunciado real (I2 2024) — tal cual', html: '"Para el sistema de la figura encuentre las aceleraciones de los bloques $B$ (de masa $m$) y $A$ (de masa $M$) y las tensiones de las cuerdas." ($B$ sobre superficie horizontal unido a una cuerda que pasa por una polea fija a una polea móvil; de la polea móvil cuelga $A$.)' },
+        { t: 'example', title: 'Sistema con polea móvil (I2 2024)', level: 'dificil',
           body: '<p>Bloque $A$ ($M$) cuelga de una polea móvil; bloque $B$ ($m$) sobre superficie horizontal unido al extremo libre. Halla $a_A$, $a_B$, $T$ y $T_1$.</p>',
           solution: '<div class="steps"><div class="step"><b>Ligadura:</b> $A$ cuelga de la polea móvil ⇒ se mueve la mitad que $B$. Con $y_A$ (abajo +) y $x_B$ (+): $2y_A+x_B=\\ell\\Rightarrow 2\\ddot y_A+\\ddot x_B=0$.</div><div class="step"><b>DCL $A$:</b> $Mg-T_1=M\\ddot y_A$, donde $T_1$ sostiene la polea móvil.</div><div class="step"><b>Polea móvil ideal</b> (sin masa): $T_1=2T$, con $T$ la tensión de la cuerda que va a $B$.</div><div class="step"><b>DCL $B$</b> (horizontal): $-T=m\\ddot x_B$ (la tensión lo jala).</div><div class="step">De la ligadura $\\ddot x_B=-2\\ddot y_A$. Sustituyo: $-T=m(-2\\ddot y_A)\\Rightarrow T=2m\\ddot y_A$. Y $T_1=2T=4m\\ddot y_A$.</div><div class="step">En $A$: $Mg-4m\\ddot y_A=M\\ddot y_A\\Rightarrow Mg=(M+4m)\\ddot y_A\\Rightarrow \\boxed{\\ddot y_A=\\dfrac{M}{4m+M}g}$.</div><div class="step">Entonces $\\boxed{\\ddot x_B=-\\dfrac{2M}{4m+M}g}$, $T=\\dfrac{2Mm}{4m+M}g$, $\\boxed{T_1=\\dfrac{4Mm}{4m+M}g}$.</div></div>' },
         { t: 'box', kind: 'exam', title: 'Enunciado real (Compilado 2.10) — tal cual', html: '"En el sistema de la figura, el bloque de masa $m_1$ se mueve sobre una superficie horizontal y está conectado, a través de una cuerda ideal, a una polea que se puede mover verticalmente. El bloque de masa $m_2$ está unido a la polea por otra cuerda ideal. Todas las poleas son ideales y sin roce. La superficie horizontal es lisa. El módulo de la aceleración del bloque horizontal es:" Respuesta: $\\dfrac{2m_2g}{4m_1+m_2}$.' },
@@ -268,7 +268,7 @@ U({
   tag: 'Unidad 3 · Circular',
   title: 'Movimiento circular',
   badge: { text: 'cae harto', cls: 'pill-high' },
-  desc: 'Fuerza centrípeta, coordenadas polares ($a_r$, $a_\\theta$), el rizo/loop, el cono giratorio y el péndulo. El tema "rotante" que aparece consistentemente en los C2.',
+  desc: 'Fuerza centrípeta, coordenadas polares ($a_r$, $a_\\theta$), el rizo/loop, el cono giratorio y el péndulo. El tema "rotante" que aparece consistentemente en las pruebas pasadas (I2).',
   lessons: [
     {
       id: 'u3l1', title: 'Aceleración centrípeta y coordenadas polares',
@@ -301,9 +301,9 @@ U({
     {
       id: 'u3l3', title: 'Conos giratorios, barras y péndulos',
       blocks: [
-        { t: 'p', html: 'Los problemas "rotantes" del C2 casi siempre te dan la fórmula de la aceleración en polares/cilíndricas como hint, y te piden normales o fuerzas. La estrategia es siempre la misma: DCL + Newton por componentes con $a_r=-R\\omega^2$.' },
-        { t: 'box', kind: 'exam', title: 'Enunciado real (C2 2023) — anillo en barra giratoria', html: '"Un anillo $C$ de masa $m$ puede deslizar libremente a lo largo de la barra lisa $AB$. En un instante dado, la barra $AB$ gira con velocidad angular $\\omega$ y aceleración angular $\\alpha$. Suponiendo que la barra $AB$ está alineada horizontalmente: determine la fuerza normal de la barra y la reacción radial de la placa $B$ sobre el anillo. Indicación: $\\vec a=(\\ddot r-r\\dot\\theta^2)\\hat r+(r\\ddot\\theta+2\\dot r\\dot\\theta)\\hat\\theta$."' },
-        { t: 'example', title: 'Anillo en barra giratoria (C2 2023)', level: 'medio',
+        { t: 'p', html: 'Los problemas "rotantes" de la Prueba 2 casi siempre te dan la fórmula de la aceleración en polares/cilíndricas como hint, y te piden normales o fuerzas. La estrategia es siempre la misma: DCL + Newton por componentes con $a_r=-R\\omega^2$.' },
+        { t: 'box', kind: 'exam', title: 'Enunciado real (I2 2023) — anillo en barra giratoria', html: '"Un anillo $C$ de masa $m$ puede deslizar libremente a lo largo de la barra lisa $AB$. En un instante dado, la barra $AB$ gira con velocidad angular $\\omega$ y aceleración angular $\\alpha$. Suponiendo que la barra $AB$ está alineada horizontalmente: determine la fuerza normal de la barra y la reacción radial de la placa $B$ sobre el anillo. Indicación: $\\vec a=(\\ddot r-r\\dot\\theta^2)\\hat r+(r\\ddot\\theta+2\\dot r\\dot\\theta)\\hat\\theta$."' },
+        { t: 'example', title: 'Anillo en barra giratoria (I2 2023)', level: 'medio',
           body: '<p>Anillo a distancia $R$ del eje, barra gira con $\\omega$ y $\\alpha$, plano horizontal. Halla la reacción radial $N_B$ y la normal de la barra $F_{AB}$.</p>',
           solution: '<div class="steps"><div class="step">El anillo está fijo a la barra en $B$ (la placa lo retiene), así que $r=R$ constante: $\\dot r=\\ddot r=0$. Entonces $a_r=\\ddot r-r\\dot\\theta^2=-R\\omega^2$ y $a_\\theta=r\\ddot\\theta+2\\dot r\\dot\\theta=R\\alpha$.</div><div class="step"><b>DCL</b> (plano horizontal, el peso lo equilibra la normal vertical de la barra): radialmente solo actúa $N_B$ (la placa empuja hacia el centro), tangencialmente la barra empuja con $F_{AB}$.</div><div class="step"><b>Radial:</b> $-N_B=ma_r=-mR\\omega^2\\Rightarrow \\boxed{N_B=mR\\omega^2}$.</div><div class="step"><b>Tangencial:</b> $F_{AB}=ma_\\theta=\\boxed{mR\\alpha}$.</div></div>' },
         { t: 'box', kind: 'exam', title: 'Enunciado real (I2 2024) — partícula en cono', html: '"Una partícula de masa $m$ se encuentra sobre la superficie interior de un cono invertido de 45° que gira con velocidad angular constante $\\omega_0$ respecto a su eje $z$. Entre la superficie y la partícula existe roce estático que la mantiene sin deslizar y girando en círculo a radio $R$. (b) Encuentre la normal. (c) Encuentre el roce estático. Hint: $\\cos45°=\\sin45°=1/\\sqrt2$."' },
@@ -392,7 +392,7 @@ U({
         { t: 'example', title: 'Trabajo por dos caminos (campo no conservativo)', level: 'dificil',
           body: '<p>$\\vec F=(x^2,xy)$. Calcula el trabajo de $(0,0)$ a $(1,1)$ por $C_1$: tramo 1 de $(0,0)$ a $(1,0)$, tramo 2 de $(1,0)$ a $(1,1)$.</p>',
           solution: '<div class="steps"><div class="step"><b>Tramo 1</b> ($y=0$, $dy=0$, $x:0\\to1$): $W=\\int F_x\\,dx=\\int_0^1 x^2\\,dx=\\tfrac13$.</div><div class="step"><b>Tramo 2</b> ($x=1$, $dx=0$, $y:0\\to1$): $W=\\int F_y\\,dy=\\int_0^1 (1)(y)\\,dy=\\tfrac12$.</div><div class="step">$W_1=\\tfrac13+\\tfrac12=\\tfrac56$. Por el otro camino daría $\\tfrac13$. Como dependen del camino, $\\vec F$ es <b>no conservativa</b> (no tiene energía potencial asociada).</div></div>' },
-        { t: 'example', title: 'Enunciado real (C2 2021) — camión que acelera una caja', level: 'dificil',
+        { t: 'example', title: 'Enunciado real (I2 2021) — camión que acelera una caja', level: 'dificil',
           body: '<p>"Un camión transporta una caja de masa $M$ y parte del reposo con aceleración constante $a$, recorriendo una distancia $D$ horizontal. Coeficientes caja-plataforma $\\mu_e$ y $\\mu_c$. (a) Mínimo $\\mu_e$ para que la caja no deslice. (b) Trabajo del camión sobre la caja si $\\mu_e>\\mu_{e,min}$. (c) Trabajo si $\\mu_e<\\mu_{e,min}$."</p>',
           solution: '<div class="steps"><div class="step"><b>(a)</b> La única fuerza horizontal sobre la caja es el roce, que debe darle la aceleración $a$: $f=Ma$. Para no deslizar, $f\\le\\mu_e Mg$, en el límite $\\mu_{e,min}Mg=Ma\\Rightarrow \\boxed{\\mu_{e,min}=a/g}$.</div><div class="step"><b>(b)</b> Si no desliza, la caja recorre $D$ con la misma $a$. El trabajo del roce (que es el que ejerce el camión) = $\\Delta K=\\tfrac12 Mv_f^2$ con $v_f^2=2aD$: $\\boxed{W_b=MaD}$.</div><div class="step"><b>(c)</b> Si desliza, el roce es cinético $f=\\mu_c Mg$, la caja acelera $a_c=\\mu_c g$. En el tiempo que el camión recorre $D$ ($\\Delta t=\\sqrt{2D/a}$), la caja gana $v_f=\\mu_c g\\,\\Delta t$. El trabajo del camión sobre la caja = su energía cinética: $W_c=\\tfrac12 Mv_f^2=\\boxed{\\dfrac{M\\mu_c^2 g^2 D}{a}}$.</div></div>' }
       ]
@@ -421,8 +421,8 @@ U({
   id: 'u5', block: 'energia', prio: 3, icon: '🏔️',
   tag: 'Unidad 5 · Conservación',
   title: 'Energía potencial y conservación',
-  badge: { text: 'el rey del C2', cls: 'pill-star' },
-  desc: 'Energía potencial (gravitatoria y elástica), conservación de la energía mecánica, y el balance con roce E_f − E_i = W_nc. El tema que MÁS cae en el Control 2.',
+  badge: { text: 'el que más cae', cls: 'pill-star' },
+  desc: 'Energía potencial (gravitatoria y elástica), conservación de la energía mecánica, y el balance con roce E_f − E_i = W_nc. El tema que MÁS cae en el Prueba 2.',
   lessons: [
     {
       id: 'u5l1', title: 'Energía potencial y conservación de la energía mecánica',
@@ -441,14 +441,14 @@ U({
       id: 'u5l2', title: 'El balance con roce: E_f − E_i = W_nc',
       blocks: [
         { t: 'p', html: 'Cuando hay roce (o una fuerza externa), la energía mecánica YA NO se conserva: el roce se la "come". El cambio de energía mecánica es exactamente el trabajo de las fuerzas no conservativas.' },
-        { t: 'box', kind: 'form', title: 'La ecuación maestra del Control 2', html: '$$\\boxed{E_f-E_i=W_{nc}}$$ donde $W_{nc}=W_{roce}+W_{F_{ext}}$, y el roce aporta $W_{roce}=-\\mu_k N\\,s$ (negativo). En un plano $\\theta$: $N=mg\\cos\\theta$ y $s=h/\\sin\\theta$ si recorre una altura $h$.' },
+        { t: 'box', kind: 'form', title: 'La ecuación maestra del Prueba 2', html: '$$\\boxed{E_f-E_i=W_{nc}}$$ donde $W_{nc}=W_{roce}+W_{F_{ext}}$, y el roce aporta $W_{roce}=-\\mu_k N\\,s$ (negativo). En un plano $\\theta$: $N=mg\\cos\\theta$ y $s=h/\\sin\\theta$ si recorre una altura $h$.' },
         { t: 'box', kind: 'warn', html: 'Cuidado con los signos: $W_{nc}$ es casi siempre NEGATIVO (el roce resta), así que $E_f<E_i$. Si te da $E_f>E_i$ sin una fuerza externa que empuje, te equivocaste en un signo.' },
         { t: 'box', kind: 'exam', title: 'Enunciado real (I2 2023) — resorte con roce', html: '"Una masa $M$ está unida a un resorte de constante $k$ y largo natural $\\ell_0$, fijo a una pared. La masa desliza sobre un plano horizontal con coeficiente de roce $\\mu$ (estático = cinético). Inicialmente el resorte está comprimido $\\delta_0$. En $t=0$ la masa se suelta, alcanza una elongación máxima $\\delta_1$, luego vuelve y alcanza una compresión $\\delta_2$. Encuentre $\\delta_1$ y $\\delta_2$."' },
         { t: 'example', title: 'Resorte con roce, ida y vuelta (I2 2023)', level: 'dificil',
           body: '<p>Resorte comprimido $\\delta_0$, roce $\\mu$. Halla la elongación máxima $\\delta_1$ y la compresión de regreso $\\delta_2$ (en valor absoluto).</p>',
           solution: '<div class="steps"><div class="step"><b>Ida</b> ($\\delta_0\\to\\delta_1$): en ambos extremos la masa está en reposo ($K=0$). Solo cambia la energía elástica. Distancia recorrida $s=\\delta_0+\\delta_1$.</div><div class="step">$E_f-E_i=W_{roce}$: $\\tfrac12 k\\delta_1^2-\\tfrac12 k\\delta_0^2=-\\mu Mg(\\delta_0+\\delta_1)$.</div><div class="step">Factorizo $\\tfrac12 k(\\delta_1^2-\\delta_0^2)=\\tfrac12 k(\\delta_1-\\delta_0)(\\delta_1+\\delta_0)=-\\mu Mg(\\delta_0+\\delta_1)$. Divido por $(\\delta_0+\\delta_1)$: $\\tfrac12 k(\\delta_1-\\delta_0)=-\\mu Mg\\Rightarrow \\boxed{\\delta_1=\\delta_0-\\dfrac{2\\mu Mg}{k}}$.</div><div class="step"><b>Vuelta</b> ($\\delta_1\\to\\delta_2$): mismo razonamiento, otra vez resta $\\dfrac{2\\mu Mg}{k}$: $\\boxed{\\delta_2=\\delta_1-\\dfrac{2\\mu Mg}{k}=\\delta_0-\\dfrac{4\\mu Mg}{k}}$.</div><div class="step">Patrón bonito: cada medio ciclo el resorte pierde $\\dfrac{2\\mu Mg}{k}$ de amplitud. Así se amortigua una oscilación con roce.</div></div>' },
-        { t: 'box', kind: 'exam', title: 'Enunciado real (C2 2021) — paquetes en rampa y cinta', html: '"Paquetes de masa $m$ se arrojan en una rampa inclinada desde el punto $A$ con rapidez $v_0$. Se deslizan sobre las superficies $ABC$ (tramo inclinado $\\theta$ de largo $d$, luego horizontal $L$) llegando a una cinta que se mueve con rapidez $v_1$. Experimentan roce $\\mu$ con todas las superficies. (a) Determine la rapidez en $C$."' },
-        { t: 'example', title: 'Paquetes en rampa con roce (C2 2021)', level: 'dificil',
+        { t: 'box', kind: 'exam', title: 'Enunciado real (I2 2021) — paquetes en rampa y cinta', html: '"Paquetes de masa $m$ se arrojan en una rampa inclinada desde el punto $A$ con rapidez $v_0$. Se deslizan sobre las superficies $ABC$ (tramo inclinado $\\theta$ de largo $d$, luego horizontal $L$) llegando a una cinta que se mueve con rapidez $v_1$. Experimentan roce $\\mu$ con todas las superficies. (a) Determine la rapidez en $C$."' },
+        { t: 'example', title: 'Paquetes en rampa con roce (I2 2021)', level: 'dificil',
           body: '<p>Sale de $A$ con $v_0$, baja el tramo inclinado $d$ (ángulo $\\theta$, altura $d\\sin\\theta$), luego horizontal $L$, todo con roce $\\mu$. Halla $v_C$.</p>',
           solution: '<div class="steps"><div class="step">Tomo $U_g=0$ en el nivel de $C$ (abajo). Punto inicial $A$ está a altura $h_A=d\\sin\\theta$.</div><div class="step">Roce: en el plano $W_1=-\\mu(mg\\cos\\theta)\\,d$; en el horizontal $W_2=-\\mu mg\\,L$. Total $W_{nc}=-\\mu mg(d\\cos\\theta+L)$.</div><div class="step">Balance $E_C-E_A=W_{nc}$: $\\big(\\tfrac12 mv_C^2+0\\big)-\\big(\\tfrac12 mv_0^2+mgd\\sin\\theta\\big)=-\\mu mg(d\\cos\\theta+L)$.</div><div class="step">Despejo: $\\boxed{v_C=\\sqrt{v_0^2+2gd\\sin\\theta-2\\mu g(d\\cos\\theta+L)}}$.</div></div>' }
       ]
@@ -477,9 +477,9 @@ U({
     {
       id: 'u5l4', title: 'El gran combo: argolla en guía con resorte y roce',
       blocks: [
-        { t: 'p', html: 'El problema "estrella" de varios Controles 2: una argolla en una guía (recta + curva) con un resorte pivotado y un tramo con roce. Da miedo, pero es solo la receta de energía aplicada con cuidado a la geometría.' },
-        { t: 'box', kind: 'exam', title: 'Enunciado real (C2 2021 / Compilado 3.1) — argolla en guía', html: '"Una argolla de masa $m$ parte desde el reposo en $A$ y se desliza por una guía (en un plano vertical) bajo su peso y un resorte de constante $k$ y largo natural $R$ (o $R/2$), pivotado en un punto fijo. El arco $ABCD$ es sin roce, pero el tramo $DE$ (o $DA$) tiene roce cinético $\\mu_c$. Determine el máximo valor de $m$ para que la argolla llegue a $D$ / la rapidez en $C$ / la distancia $X$ que alcanza." (Geometría con radio $R$.)' },
-        { t: 'example', title: 'Argolla en guía con resorte (C2 2021, parte a)', level: 'dificil',
+        { t: 'p', html: 'El problema "estrella" de varias I2 pasadas: una argolla en una guía (recta + curva) con un resorte pivotado y un tramo con roce. Da miedo, pero es solo la receta de energía aplicada con cuidado a la geometría.' },
+        { t: 'box', kind: 'exam', title: 'Enunciado real (I2 2021 / Compilado 3.1) — argolla en guía', html: '"Una argolla de masa $m$ parte desde el reposo en $A$ y se desliza por una guía (en un plano vertical) bajo su peso y un resorte de constante $k$ y largo natural $R$ (o $R/2$), pivotado en un punto fijo. El arco $ABCD$ es sin roce, pero el tramo $DE$ (o $DA$) tiene roce cinético $\\mu_c$. Determine el máximo valor de $m$ para que la argolla llegue a $D$ / la rapidez en $C$ / la distancia $X$ que alcanza." (Geometría con radio $R$.)' },
+        { t: 'example', title: 'Argolla en guía con resorte (I2 2021, parte a)', level: 'dificil',
           body: '<p>Argolla parte en reposo en $A$, resorte ($k$, largo natural $R$) pivotado en $O$. Arco $ABCD$ sin roce. Halla el máximo $m$ para que la argolla "apenas" llegue a $D$ (a altura $2R$), donde el resorte tiene su largo natural. En $A$ el resorte mide $\\sqrt{(2R)^2+R^2}=R\\sqrt5$.</p>',
           solution: '<div class="steps"><div class="step">"Apenas llega a $D$" ⇒ llega con $v=0$. Sin roce en $ABCD$ ⇒ conservación $E_A=E_D$.</div><div class="step">En $A$ (reposo, $U_g=0$): energía elástica con deformación $x_A=R\\sqrt5-R=R(\\sqrt5-1)$. $E_A=\\tfrac12 k\\,R^2(\\sqrt5-1)^2$.</div><div class="step">En $D$ (reposo, altura $2R$, resorte en largo natural ⇒ $U_e=0$): $E_D=mg(2R)$.</div><div class="step">Igualo: $\\tfrac12 kR^2(\\sqrt5-1)^2=2mgR\\Rightarrow \\boxed{m=\\dfrac{kR(\\sqrt5-1)^2}{4g}}$.</div><div class="step">Es el máximo $m$: con más masa, $mg\\cdot2R$ supera la energía del resorte y no llega. (En la parte b, lo que sobra de energía cinética en $D$ se disipa por el roce en $DE$: $\\tfrac12 mv_D^2=\\mu_c mg\\,X$.)</div></div>' }
       ]
@@ -587,7 +587,7 @@ U({
   id: 'u7', block: 'momentum', prio: 3, icon: '💥',
   tag: 'Unidad 7 · Momentum',
   title: 'Impulso y momentum',
-  badge: { text: 'entra al C2', cls: 'pill-hot' },
+  badge: { text: 'entra seguro', cls: 'pill-hot' },
   desc: 'Momentum, impulso, conservación del momentum, y choques (elásticos, inelásticos y con coeficiente de restitución). El último gran tema del temario.',
   lessons: [
     {
@@ -674,17 +674,17 @@ U({
   tag: 'Unidad 8 · Para llegar listo',
   title: 'Simulacro, formulario y plan',
   badge: { text: 'al final', cls: 'pill-new' },
-  desc: 'Un simulacro tipo Control 2 real (con enunciados de prueba y solución paso a paso), el formulario completo para memorizar, y el plan de estudio día a día.',
+  desc: 'Un simulacro tipo Prueba 2 real (con enunciados de prueba y solución paso a paso), el formulario completo para memorizar, y el plan de estudio día a día.',
   lessons: [
     {
-      id: 'u8l1', title: 'Simulacro tipo Control 2 (enunciados reales)',
+      id: 'u8l1', title: 'Simulacro tipo Prueba 2 (enunciados reales)',
       blocks: [
-        { t: 'p', html: 'Cuatro problemas estilo Control 2 real, uno por bloque de materia. Intenta cada uno en papel ANTES de mirar la solución. Date el tiempo de la prueba. Recuerda: $g=10\\,\\mathrm{m/s^2}$.' },
-        { t: 'box', kind: 'exam', html: 'Formato real del Control 2: problemas de DESARROLLO (te dan puntaje por DCL, ecuaciones y procedimiento). Escribe cada paso, dibuja el DCL, y deja la respuesta en función de los datos. No te saltes el dibujo.' },
-        { t: 'example', title: 'P1 · Newton (C2 2023, enunciado real)', level: 'medio',
+        { t: 'p', html: 'Cuatro problemas estilo Prueba 2 real, uno por bloque de materia. Intenta cada uno en papel ANTES de mirar la solución. Date el tiempo de la prueba. Recuerda: $g=10\\,\\mathrm{m/s^2}$.' },
+        { t: 'box', kind: 'exam', html: 'Formato real del Prueba 2: problemas de DESARROLLO (te dan puntaje por DCL, ecuaciones y procedimiento). Escribe cada paso, dibuja el DCL, y deja la respuesta en función de los datos. No te saltes el dibujo.' },
+        { t: 'example', title: 'P1 · Newton (I2 2023, enunciado real)', level: 'medio',
           body: '<p>"Considere un bloque sobre un plano inclinado de ángulo $\\theta$. Los coeficientes son $\\mu_s$ y $\\mu_c$. (b) Encuentre el máximo $\\theta$ tal que el bloque permanezca en reposo cuando el plano NO se mueve. Justifique la dirección del roce y su tipo."</p>',
           solution: '<div class="steps"><div class="step"><b>DCL:</b> peso $mg$ (abajo), normal $N$ (perpendicular al plano), roce $f$ (a lo largo del plano). El bloque tiende a deslizar hacia abajo, así que el roce estático apunta hacia ARRIBA del plano.</div><div class="step">Ejes en el plano. Perpendicular: $N=mg\\cos\\theta$. Paralelo (equilibrio): $mg\\sin\\theta=f$.</div><div class="step">En el máximo ángulo, el roce está en su tope: $f=\\mu_s N=\\mu_s mg\\cos\\theta$.</div><div class="step">Igualo: $mg\\sin\\theta=\\mu_s mg\\cos\\theta\\Rightarrow \\tan\\theta=\\mu_s\\Rightarrow \\boxed{\\theta_{max}=\\arctan\\mu_s}$. Es roce ESTÁTICO (no desliza) hacia arriba (se opone a la tendencia a caer).</div></div>' },
-        { t: 'example', title: 'P2 · Energía + plano con roce (C2 2021, enunciado real)', level: 'dificil',
+        { t: 'example', title: 'P2 · Energía + plano con roce (I2 2021, enunciado real)', level: 'dificil',
           body: '<p>"Un bloque $m$ unido a un resorte ($k$, largo natural $\\ell_0=3mg/k$) fijo en $O$ a altura $\\ell_0$. En $A$ (bajo $O$) se le da velocidad $v_A$ hacia $B$; en $B$ se detiene y el largo del resorte es $\\ell_b=3\\ell_0/2$. (a) Encuentre $v_A$." </p>',
           solution: '<div class="steps"><div class="step">Entre $A$ y $B$ el bloque va por el plano horizontal; en ese tramo (tómalo sin roce para la parte a) se conserva la energía: $E_A=E_B$.</div><div class="step">En $A$ el resorte está en su largo natural (deformación 0), el bloque tiene $v_A$: $E_A=\\tfrac12 mv_A^2$.</div><div class="step">En $B$ está en reposo, el resorte estirado $\\Delta\\ell=\\ell_b-\\ell_0=\\tfrac{3\\ell_0}{2}-\\ell_0=\\tfrac{\\ell_0}{2}$: $E_B=\\tfrac12 k\\big(\\tfrac{\\ell_0}{2}\\big)^2=\\tfrac{k\\ell_0^2}{8}$.</div><div class="step">$\\tfrac12 mv_A^2=\\tfrac{k\\ell_0^2}{8}\\Rightarrow \\boxed{v_A=\\ell_0\\sqrt{\\dfrac{k}{4m}}=\\dfrac{\\ell_0}{2}\\sqrt{\\dfrac{k}{m}}}$.</div></div>' },
         { t: 'example', title: 'P3 · MAS (Ayudantía 10, enunciado real)', level: 'dificil',
@@ -698,7 +698,7 @@ U({
     {
       id: 'u8l2', title: 'Formulario completo (memorízalo)',
       blocks: [
-        { t: 'box', kind: 'warn', html: 'Esto es lo mínimo que debes tener en la cabeza el día del Control 2. Repásalo en voz alta hasta que salga solo. $g=10\\,\\mathrm{m/s^2}$ salvo que digan otra cosa.' },
+        { t: 'box', kind: 'warn', html: 'Esto es lo mínimo que debes tener en la cabeza el día del Prueba 2. Repásalo en voz alta hasta que salga solo. $g=10\\,\\mathrm{m/s^2}$ salvo que digan otra cosa.' },
         { t: 'h3', html: 'Newton y fuerzas' },
         { t: 'box', kind: 'form', html: '$\\sum\\vec F=m\\vec a$. &nbsp; Roce: $f_s\\le\\mu_s N$ (estático), $f_k=\\mu_k N$ (cinético).<br>Plano $\\theta$: $N=mg\\cos\\theta$; baja $mg\\sin\\theta$. &nbsp; Hooke: $F=k|\\Delta\\ell|$.<br>"¿Se mueve?": comparar fuerza motriz con $\\mu_s N$.' },
         { t: 'h3', html: 'Ligaduras y poleas' },
@@ -726,13 +726,13 @@ U({
     }
   ],
   flashcards: [
-    { q: 'Las 3 cosas que más caen en el Control 2', a: 'Energía con roce ($E_f-E_i=W_{nc}$), Newton con poleas (2:1), y MAS ($\\omega=\\sqrt{k/m}$).' },
+    { q: 'Las 3 cosas que más caen en el Prueba 2', a: 'Energía con roce ($E_f-E_i=W_{nc}$), Newton con poleas (2:1), y MAS ($\\omega=\\sqrt{k/m}$).' },
     { q: 'Regla de oro #1 en la prueba', a: 'Siempre dibujar el DCL primero. Vale puntos y evita errores.' },
     { q: 'Máximo ángulo para que un bloque no deslice', a: '$\\tan\\theta_{max}=\\mu_s$ (de $mg\\sin\\theta=\\mu_s mg\\cos\\theta$).' },
     { q: 'n esferas en fila con restitución e: velocidad de la última', a: '$v_n=v_1\\left(\\frac{1+e}{2}\\right)^{n-1}$.' }
   ],
   quiz: [
-    { type: 'comp', q: 'Si te queda poco tiempo de estudio, ¿qué priorizas?', opts: ['Solo momentum', 'Energía con roce, poleas y MAS', 'Solo el formulario', 'Solo circular'], answer: 1, explain: 'Energía, poleas y MAS son el grueso del Control 2.' },
+    { type: 'comp', q: 'Si te queda poco tiempo de estudio, ¿qué priorizas?', opts: ['Solo momentum', 'Energía con roce, poleas y MAS', 'Solo el formulario', 'Solo circular'], answer: 1, explain: 'Energía, poleas y MAS son el grueso del Prueba 2.' },
     { type: 'vf', q: 'En un problema de desarrollo conviene dibujar el DCL antes de escribir ecuaciones.', opts: ['Verdadero', 'Falso'], answer: 0, explain: 'Verdadero: el DCL da puntos y ordena el problema.' },
     { type: 'alt', q: 'El máximo ángulo de un plano para que un bloque no deslice cumple:', opts: ['$\\sin\\theta=\\mu_s$', '$\\tan\\theta=\\mu_s$', '$\\cos\\theta=\\mu_s$', '$\\theta=\\mu_s$'], answer: 1, explain: 'De $mg\\sin\\theta=\\mu_s mg\\cos\\theta$ sale $\\tan\\theta=\\mu_s$.' }
   ]
