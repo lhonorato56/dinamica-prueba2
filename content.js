@@ -41,6 +41,23 @@ U({
       ]
     },
     {
+      id: 'u0l1b', title: 'Qué sale MÁS en la prueba (con porcentajes)',
+      blocks: [
+        { t: 'p', html: 'Esto es para que decidas dónde poner tus horas. Conté los temas de <b>19 problemas de pruebas reales</b> (Interrogaciones 2 de 2021–2024 + tu Control 2 2026). Los porcentajes son aproximados y algunos problemas mezclan temas, pero la foto es clarísima.' },
+        { t: 'ftable', head: ['Tema', '≈ % de los problemas', 'Dónde está'], rows: [
+          ['<b>Energía y trabajo</b> (conservación, resortes, roce)', '≈ 37%', 'U4 + U5 ⭐'],
+          ['<b>Newton / DCL</b> (roce, sistemas acelerados, guías)', '≈ 26%', 'U1 + U3'],
+          ['<b>Movimiento circular</b> (centrípeto, polares, cono, rizo)', '≈ 21%', 'U3'],
+          ['<b>Ligaduras y poleas</b> (relación 2:1)', '≈ 11%', 'U2'],
+          ['<b>MAS</b> (oscilaciones)', '≈ 11%', 'U6'],
+          ['<b>Impulso y momentum</b> (choques)', '≈ 5%', 'U7']
+        ]},
+        { t: 'box', kind: 'def', title: 'La foto en grande (dos mitades)', html: 'Casi todo se reparte en dos familias de tamaño parecido:<br><b>• Familia NEWTON</b> (DCL, roce, sistemas acelerados, circular, poleas) ≈ <b>50%</b>.<br><b>• Familia ENERGÍA</b> (trabajo, conservación con roce, MAS) ≈ <b>47%</b>.<br><b>• Impulso/momentum</b> casi no cae en las pruebas (≈5%), aunque ESTÁ en el temario. No lo ignores, pero estúdialo al final.' },
+        { t: 'box', kind: 'warn', title: '🎯 Lo más probable según TU Control 2 (estúdialo sí o sí)', html: 'Tu Control 2 del 15-may-2026 fue una <b>argolla en una varilla/guía circular con un resorte</b>: te pidieron DCL, la <b>fuerza de contacto (normal)</b> y la <b>aceleración</b>, resolviendo con <b>Newton + aceleración centrípeta</b> (no con energía). Como a todo el curso le fue mal, es MUY probable que la Prueba repita ese tipo. Está resuelto paso a paso en la <b>Unidad 3</b> (y la versión con energía, en la U5). Domina ese problema.' },
+        { t: 'box', kind: 'peras', title: 'Si tienes que priorizar', html: 'Con <b>Energía (U5) + Newton en guías y circular (U1 + U3)</b> cubres cerca del <b>70%</b> de lo que cae. Súmale <b>poleas (U2)</b> y <b>MAS (U6)</b> y llegas al ~95%. Deja impulso/momentum (U7) para el final.' }
+      ]
+    },
+    {
       id: 'u0l2', title: 'Qué MEMORIZAR, qué ENTENDER y qué NO memorizar',
       blocks: [
         { t: 'p', html: 'No todo pesa igual. Esto te ahorra horas: hay cosas que deben salir sin pensar, otras que solo debes entender para deducirlas, y otras que NO vale la pena memorizar.' },
@@ -264,11 +281,11 @@ U({
    UNIDAD 3 — MOVIMIENTO CIRCULAR
    ===================================================================== */
 U({
-  id: 'u3', block: 'newton', prio: 2, icon: '🔄',
+  id: 'u3', block: 'newton', prio: 3, icon: '🔄',
   tag: 'Unidad 3 · Circular',
   title: 'Movimiento circular',
-  badge: { text: 'cae harto', cls: 'pill-high' },
-  desc: 'Fuerza centrípeta, coordenadas polares ($a_r$, $a_\\theta$), el rizo/loop, el cono giratorio y el péndulo. El tema "rotante" que aparece consistentemente en las pruebas pasadas (I2).',
+  badge: { text: 'lo más probable', cls: 'pill-star' },
+  desc: 'Fuerza centrípeta, coordenadas polares ($a_r$, $a_\\theta$), guías circulares con resorte, el rizo, el cono y el péndulo. INCLUYE tu Control 2 resuelto: es el tipo más probable de la Prueba.',
   lessons: [
     {
       id: 'u3l1', title: 'Aceleración centrípeta y coordenadas polares',
@@ -283,7 +300,11 @@ U({
           ['$r\\ddot\\theta+2\\dot r\\dot\\theta$', 'Componente tangencial. Si $r$ cte y $\\omega$ cte, es 0.']
         ]},
         { t: 'box', kind: 'warn', title: 'Caso círculo (r constante)', html: 'Si el radio no cambia ($\\dot r=\\ddot r=0$): $\\vec a=-R\\dot\\theta^2\\,\\hat u_r+R\\ddot\\theta\\,\\hat u_\\theta$. La parte radial $-R\\dot\\theta^2=-v^2/R$ es la centrípeta; la tangencial $R\\ddot\\theta$ es la que cambia la rapidez. Newton radial: $\\sum F_r=-mv^2/R$ (negativo = hacia el centro).' },
-        { t: 'box', kind: 'peras', html: 'Con peras: das vueltas a una piedra con una cuerda. La cuerda tira de la piedra hacia tu mano (hacia el centro): esa tensión ES la fuerza centrípeta. Si sueltas, no hay fuerza al centro y la piedra sale disparada en línea recta (tangente). La fuerza centrípeta no es una fuerza nueva: es el NOMBRE del rol que cumple la tensión, la normal o el roce.' }
+        { t: 'box', kind: 'peras', html: 'Con peras: das vueltas a una piedra con una cuerda. La cuerda tira de la piedra hacia tu mano (hacia el centro): esa tensión ES la fuerza centrípeta. Si sueltas, no hay fuerza al centro y la piedra sale disparada en línea recta (tangente). La fuerza centrípeta no es una fuerza nueva: es el NOMBRE del rol que cumple la tensión, la normal o el roce.' },
+        { t: 'box', kind: 'exam', title: '🎯 TU Control 2 (15-may-2026) — el tipo MÁS probable de la Prueba', html: 'Enunciado tal cual: "Una argolla de masa $m$ desliza sin roce por una varilla circular $AB$, dispuesta en un plano vertical. Un resorte ideal de largo natural $R$ y constante $k$ está fijo en $B$ y unido a la argolla. La argolla se lanza hacia arriba (verticalmente) desde $A$ con velocidad $\\vec v_0$. Para el instante inmediatamente posterior al lanzamiento: (a) DCL, (b) ecuaciones de movimiento, (c) fuerza de contacto entre argolla y varilla, (d) aceleración de la argolla." (Geometría: cuarto de circunferencia de radio $R$; centro $O$ a la derecha de $A$; $B$ arriba de $O$.)' },
+        { t: 'example', title: 'Argolla en guía circular con resorte (tu Control 2) — Newton + centrípeta', level: 'dificil',
+          body: '<p>Resuélvelo con Newton (no energía): halla la normal $N$ y la aceleración $\\vec a$ justo tras el lanzamiento en $A$. Este es el problema que probablemente caiga.</p>',
+          solution: '<div class="steps"><div class="step"><b>Geometría en $A$.</b> El centro $O$ está a la derecha de $A$ (a distancia $R$), así que en $A$ la dirección <b>radial</b> (hacia el centro) es horizontal $+\\hat x$, y la <b>tangente</b> (dirección del lanzamiento) es vertical $\\hat y$. La argolla entra al círculo con rapidez $v_0$.</div><div class="step"><b>Resorte.</b> $B$ está en $O+R\\hat y$, o sea en $A+(R,R)$. El resorte va de $A$ a $B$: largo $=\\sqrt{R^2+R^2}=R\\sqrt2$, deformación $=R\\sqrt2-R=R(\\sqrt2-1)$. Apunta a $45°$, así que sus componentes son $\\dfrac{kR(\\sqrt2-1)}{\\sqrt2}$ tanto en $\\hat x$ como en $\\hat y$.</div><div class="step"><b>DCL en $A$:</b> peso $-mg\\hat y$; fuerza del resorte $\\dfrac{kR(\\sqrt2-1)}{\\sqrt2}(\\hat x+\\hat y)$; normal de la varilla $\\vec N$, radial (la tomamos en $-\\hat x$, saliendo del centro).</div><div class="step"><b>Eje $\\hat x$ (radial = centrípeta, $a_x=v_0^2/R$ hacia el centro):</b> $\\dfrac{kR(\\sqrt2-1)}{\\sqrt2}-N=m\\dfrac{v_0^2}{R}$.</div><div class="step"><b>(c) Despejo la fuerza de contacto:</b> $\\boxed{N=\\dfrac{kR(\\sqrt2-1)}{\\sqrt2}-\\dfrac{mv_0^2}{R}}$.</div><div class="step"><b>Eje $\\hat y$ (tangencial, $a_y$):</b> $\\dfrac{kR(\\sqrt2-1)}{\\sqrt2}-mg=ma_y\\Rightarrow a_y=\\dfrac{kR(\\sqrt2-1)}{m\\sqrt2}-g$.</div><div class="step"><b>(d) Aceleración total:</b> $\\boxed{\\vec a=\\dfrac{v_0^2}{R}\\,\\hat x+\\left(\\dfrac{kR(\\sqrt2-1)}{m\\sqrt2}-g\\right)\\hat y}$. La parte $\\hat x$ es centrípeta (la da la velocidad en la curva) y la $\\hat y$ es tangencial (la dan resorte y peso).</div><div class="step"><b>Idea clave:</b> en una guía curva, descompón en radial (centrípeta $=v^2/R$) y tangencial. La normal sale de la ecuación radial; la aceleración tangencial, de la otra. Es el mismo método del cono y del anillo en la barra.</div></div>' }
       ]
     },
     {
