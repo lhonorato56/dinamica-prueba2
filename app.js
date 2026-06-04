@@ -93,7 +93,7 @@ const App = (() => {
           <div class="ex-body">
             ${b.body || ''}
             <div class="sol-toggle" onclick="App.toggleSol('${sid}', this)">▸ Ver solución</div>
-            <div class="sol-body" id="${sid}">${b.solution || ''}</div>
+            <div class="sol-body" id="${sid}">${b.dcl ? `<div class="dcl-wrap"><div class="dcl-lbl">📐 Diagrama de cuerpo libre — apréndelo a dibujar</div>${b.dcl}</div>` : ''}${b.solution || ''}</div>
           </div></div>`;
       }
       default: return '';

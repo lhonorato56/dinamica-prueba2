@@ -243,6 +243,19 @@ const FIG = (() => {
       return fig(330,195,s,cap);
     },
 
+    // DCL genérico: cuerpo + flechas de fuerza etiquetadas (deg: 0=derecha, 90=arriba)
+    dcl({body='m', shape='box', forces=[], cap='DCL: las fuerzas que actúan sobre el cuerpo.'}={}){
+      const cx=160, cy=118, R=58;
+      let s = shape==='ball' ? ball(cx,cy,15,body) : rectC(cx,cy,42,32,body);
+      forces.forEach(fo=>{
+        const r=(fo.deg)*Math.PI/180;
+        const ex=cx+R*Math.cos(r), ey=cy-R*Math.sin(r);
+        const c=fo.c||T;
+        s+=arrow(cx,cy,ex,ey,c,fo.label,{dx:13*Math.cos(r),dy:-13*Math.sin(r),fs:14});
+      });
+      return fig(320,236,s,cap);
+    },
+
     // ⭐ Argolla en guía circular (cuarto de círculo) con resorte — Control 2
     argollaGuia({cap='Tu Control 2: argolla en guía circular con resorte. A abajo, B arriba.'}={}){
       // centro O en esquina inferior derecha; A a la izquierda de O; B arriba de O
